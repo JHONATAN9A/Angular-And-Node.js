@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="title-tolbar">{{title}}</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="containert-students">
+  <div class="sections">
+    <div class="left">
+      <app-student *ngFor="let student of students" [studentData] ="student"></app-student>
+    </div>
+    <div class="ringh">
+      <p>hOLA</p>
+    </div>
+  </div>
+</div>

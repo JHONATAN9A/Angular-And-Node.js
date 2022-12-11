@@ -1,0 +1,49 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "styles/main.scss";
+
+
+.containert-students{
+    .sections{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top:10px;
+
+        .left{
+            width:40%;
+            height: 88vH;
+            overflow-y: scroll;
+        }
+        .ringh{
+            width:60%;
+            height: 88vH;
+            background-color:#ffff55;
+        }
+
+        .left::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        .left::-webkit-scrollbar:vertical {
+            width:10px;
+        }
+
+        .left::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .left::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .left::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        .left::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    }
+}
