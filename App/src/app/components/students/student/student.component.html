@@ -1,19 +1,19 @@
-<div class="card-student">
+<div class="card-student"  (click)="ViwDataCourse()">
     <div class="card">
         <div class="icon">
             <ul>
                 <li><img src="./assets/icons/user-icon.png" height="90" width="90"></li>
-                <li><span class="name">{{studentData}}</span></li>
+                <li><span class="name">{{studentData.first_name}} {{studentData.last_name}}</span></li>
             </ul>
 
         </div>
         <div class="text">
             <h4 >Datos del Estudiante:</h4>
             <ul class="list1">
-                <li><b>Codigo:</b>102020</li>
-                <li><b>Grupos:</b>   AB</li>
-                <li><b>Correo:</b>   aitor@google.com</li>
-                <li><b>Telefono:</b>  345346-54</li>
+                <li><b>Codigo: </b>{{studentData.code}}</li>
+                <li><b>Grupos: </b>{{studentData.group}}</li>
+                <li><b>Correo: </b>{{studentData.email}}</li>
+                <li><b>Telefono: </b>{{studentData.phone_number}}</li>
                 <li style="margin-top: 5px;"><b>Cursos:</b>  Algebra, Matematicas, Español</li>
             </ul>
 

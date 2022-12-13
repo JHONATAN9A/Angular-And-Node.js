@@ -7,14 +7,28 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
-
 <div class="containert-students">
   <div class="sections">
     <div class="left">
-      <app-student *ngFor="let student of students" [studentData] ="student"></app-student>
+      <app-student [studentData] ="student" *ngFor="let student of students" (studentClicked)="viewInfoModal(student)"></app-student>
     </div>
     <div class="ringh">
-      <p>hOLA</p>
+      <div class="info-estudent">
+        <app-info-modal [GetviewInfoModal] ="viewStudent" ></app-info-modal>
+      </div>
+      <h4 class="title">Cursos</h4>
+      <div class="course-student">
+        <div class="add-course">
+          <div class="box-course">
+            <app-add-course></app-add-course>
+          </div>
+        </div>
+        <div class="remove-course">
+          <div class="box-course">
+            <app-remove-course></app-remove-course>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,47 @@
+.contenedor-info{
+    position: relative;
+    padding: 0px 12px 0px 10px;
+    font-family: "Roboto", sans-serif;
+
+    .btn-info{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: #005b9f;
+    }
+    .btn-info:hover{
+        color: #f6f6f6;
+        background-color: #005b9f;
+    }
+    .title{
+        text-align: center;
+        font-size: 2.2rem;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 800;
+        color: #005b9f;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+    }
+    .field-info{
+        column-count: 2;
+        text-align: center;
+        list-style-type: none;
+        padding: 0 0 0 0;
+
+        .field-title{
+            margin: 0 0 0 0;
+        }
+
+        .field-atribute{
+            border-bottom: solid 1px rgba(0,0,0,.1);
+            padding: 0.8rem;
+            background-color: #f7f9fb;
+            border: 0;
+            margin: 10px 0 10px 0;
+            border-radius: 10px;
+
+        }
+    }
+}

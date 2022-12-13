@@ -1,4 +1,5 @@
-import { Component, OnInit,Input,EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-student',
@@ -6,7 +7,9 @@ import { Component, OnInit,Input,EventEmitter } from '@angular/core';
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
-  @Input() studentData = 'String';
+  
+  @Input() studentData:any;
+  @Output() studentClicked = new EventEmitter<any>();
 
   constructor(){
 
@@ -14,4 +17,10 @@ export class StudentComponent implements OnInit {
   ngOnInit(): void{
 
   }
+
+  ViwDataCourse(){
+    this.studentClicked.emit(this.studentData)
+  }
+
+
 }

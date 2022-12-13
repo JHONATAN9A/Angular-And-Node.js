@@ -66,9 +66,11 @@
           "configurations": {
             "production": {
               "browserTarget": "App:build:production"
+
             },
             "development": {
               "browserTarget": "App:build:development"
+
             }
           },
           "defaultConfiguration": "development"

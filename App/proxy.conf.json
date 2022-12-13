@@ -1,0 +1,8 @@
+{
+    "/app/*":{
+        "target":"https://plataforma.education.city",
+        "secure":true,
+        "logLevel":"debug",
+        "changeOrigin":true
+    }
+}

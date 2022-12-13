@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-
-import { Students } from './models/students.model';
 import { StudentsService } from './services/students.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,9 +9,9 @@ import { StudentsService } from './services/students.service';
 })
 export class AppComponent implements OnInit {
   title = "Asignar cursos";
-  students = ["Alejandro", "Sebastian", "Miguel", "Jonathan", "Camila","David"];
 
-  products: Students[] = [];
+  public students:Array<any> = [];
+  public viewStudent:Object = {};
 
   constructor(
     private studentsService:  StudentsService
@@ -20,10 +19,17 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentsService.getStudents()
-    .subscribe(data => {
-      this.products = data;
-      console.log(data)
+    .subscribe(res => {
+      Object.entries(res)
+        .forEach(([key, value]) => {
+          this.students.push(value)
+        })
     });
 
+
+  }
+
+  viewInfoModal(student: any){
+    this.viewStudent = student;
   }
 }
